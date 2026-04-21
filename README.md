@@ -1,16 +1,14 @@
 # PropertyTracker Legal Pages
 
-This repository contains the privacy policy and user agreement for the PropertyTracker (储物箱) app.
+This repository contains the privacy policy, user agreement, and user guide for the PropertyTracker (储物箱) app.
 
 ## Files
 
-- `index.html` - Landing page with links to all legal documents
-- `privacy.html` - Privacy Policy (English)
-- `privacy_zh.html` - 隐私政策 (Chinese)
-- `user-agreement.html` - User Agreement (English)
-- `user-agreement_zh.html` - 用户协议 (Chinese)
-- `help.html` - User Guide (English)
-- `help_zh.html` - 使用指南 (Chinese)
+- `index.html` - Landing page (Chinese, default)
+- `index_en.html` - English landing page
+- `privacy.html` / `privacy_zh.html` - Privacy Policy
+- `user-agreement.html` / `user-agreement_zh.html` - User Agreement
+- `help.html` / `help_zh.html` - User Guide
 
 ## Deploy to GitHub Pages
 
