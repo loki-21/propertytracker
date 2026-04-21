@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyTracker - 储物箱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .link-card {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .link-card .icon {
+            font-size: 1.5rem;
+        }
+        .link-card .text {
+            text-align: left;
+        }
+        .link-card .title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .link-card .desc {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .lang-switch {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .lang-switch a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+            transition: background 0.2s;
+        }
+        .lang-switch a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .footer {
+            margin-top: 60px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .logo {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📦</div>
+        <h1>PropertyTracker</h1>
+        <p class="subtitle">储物箱 - 智能物品管理</p>
+
+        <div class="links">
+            <a href="privacy.html" class="link-card">
+                <span class="icon">🔒</span>
+                <div class="text">
+                    <div class="title">Privacy Policy</div>
+                    <div class="desc">English</div>
+                </div>
+            </a>
+            <a href="privacy_zh.html" class="link-card">
+                <span class="icon">🔒</span>
+                <div class="text">
+                    <div class="title">隐私政策</div>
+                    <div class="desc">中文</div>
+                </div>
+            </a>
+            <a href="user-agreement.html" class="link-card">
+                <span class="icon">📄</span>
+                <div class="text">
+                    <div class="title">User Agreement</div>
+                    <div class="desc">English</div>
+                </div>
+            </a>
+            <a href="user-agreement_zh.html" class="link-card">
+                <span class="icon">📄</span>
+                <div class="text">
+                    <div class="title">用户协议</div>
+                    <div class="desc">中文</div>
+                </div>
+            </a>
+            <a href="help.html" class="link-card">
+                <span class="icon">📖</span>
+                <div class="text">
+                    <div class="title">User Guide</div>
+                    <div class="desc">English</div>
+                </div>
+            </a>
+            <a href="help_zh.html" class="link-card">
+                <span class="icon">📖</span>
+                <div class="text">
+                    <div class="title">使用指南</div>
+                    <div class="desc">中文</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="lang-switch">
+            <a href="privacy.html">English</a>
+            <a href="privacy_zh.html">中文</a>
+            <a href="help.html">Help</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 PropertyTracker. All rights reserved.</p>
+            <p style="margin-top:10px;"><a href="help.html">User Guide</a> | <a href="help_zh.html">使用指南</a></p>
+        </div>
+    </div>
+</body>
+</html>

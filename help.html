@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - PropertyTracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: -20px;
+        }
+        h2 {
+            color: #007AFF;
+            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2:first-child {
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .tip {
+            background: #e8f4fd;
+            border-left: 4px solid #007AFF;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-title {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 5px;
+        }
+        .warning {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-title {
+            font-weight: 600;
+            color: #ff9800;
+            margin-bottom: 5px;
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: #007AFF;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .feature-card h4 {
+            color: #007AFF;
+            margin-bottom: 10px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        .lang-switch {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc h3 {
+            margin-bottom: 10px;
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PropertyTracker</h1>
+        <p>User Guide</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="lang-switch">
+                <a href="help.html">English</a> | <a href="help_zh.html">中文</a>
+            </div>
+
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#adding-items">Adding Items</a></li>
+                    <li><a href="#photos">Adding Photos</a></li>
+                    <li><a href="#locations">Storage Locations</a></li>
+                    <li><a href="#expiration">Expiration Tracking</a></li>
+                    <li><a href="#editing">Editing & Deleting</a></li>
+                    <li><a href="#search">Searching Items</a></li>
+                    <li><a href="#export">Exporting Data</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#tips">Tips & Tricks</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ol>
+            </div>
+
+            <h2 id="getting-started">1. Getting Started</h2>
+            <p>Welcome to PropertyTracker! This guide will help you make the most of the app.</p>
+
+            <div class="tip">
+                <div class="tip-title">Quick Start</div>
+                <p>Tap the "Add Item" card on the home screen to start adding items to your inventory.</p>
+            </div>
+
+            <h2 id="adding-items">2. Adding Items</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Tap Add Item</h4>
+                    <p>Tap the "Add Item" card on the main screen to open the add item form.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Enter Item Name</h4>
+                    <p>Type the item name (required). The app will suggest matching items from the database to help you enter names quickly.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Select Location</h4>
+                    <p>Choose a storage location from the preset list or enter a custom location.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Set Expiration (Optional)</h4>
+                    <p>Enable expiration tracking and set a date for items that have shelf life.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Add Notes</h4>
+                    <p>Add any additional notes or details about the item.</p>
+                </div>
+            </div>
+
+            <h2 id="photos">3. Adding Photos</h2>
+            <p>You can add photos to items in two ways:</p>
+
+            <div class="feature-card">
+                <h4>From Photo Library</h4>
+                <p>Tap "Select from Album" to choose an existing photo from your device's photo library.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>Take Photo</h4>
+                <p>Tap "Take Photo" to open the camera and capture a new photo of the item.</p>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">Camera Focus</div>
+                <p>Tap anywhere on the camera preview to set the focus point. A yellow indicator will show the focused area.</p>
+            </div>
+
+            <h2 id="locations">4. Storage Locations</h2>
+            <p>PropertyTracker includes preset locations to help you organize items:</p>
+            <ul>
+                <li><strong>Kitchen</strong> - Kitchen items and food</li>
+                <li><strong>Living Room</strong> - Living room items</li>
+                <li><strong>Bedroom</strong> - Bedroom items</li>
+                <li><strong>Study</strong> - Books, documents, office supplies</li>
+                <li><strong>Entryway</strong> - Keys, bags, everyday carry items</li>
+                <li><strong>Refrigerator</strong> - Food and beverages</li>
+                <li><strong>Bathroom</strong> - Toiletries, medicine</li>
+                <li><strong>Balcony</strong> - Outdoor items, plants</li>
+                <li><strong>Storage Room</strong> - Seasonal items, tools</li>
+                <li><strong>Garage</strong> - Car accessories, tools</li>
+            </ul>
+
+            <p>You can also enter custom locations like "Desk Drawer", "Bookshelf", etc.</p>
+
+            <h2 id="expiration">5. Expiration Tracking</h2>
+            <p>Enable expiration dates for items to get timely reminders:</p>
+
+            <div class="feature-card">
+                <h4>Status Indicators</h4>
+                <ul>
+                    <li><strong>Normal</strong> - Sufficient time remaining</li>
+                    <li><strong>Expiring Soon (Orange)</strong> - Less than 7 days remaining</li>
+                    <li><strong>Expired (Red)</strong> - Past expiration date</li>
+                </ul>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">Use Case Examples</div>
+                <p>Track expiration for food items, medicine, cosmetics, batteries, warranty documents, and seasonal items.</p>
+            </div>
+
+            <h2 id="editing">6. Editing & Deleting Items</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Open Item</h4>
+                    <p>Tap on any item in the list to open the edit view.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Modify Details</h4>
+                    <p>Change the name, location, photo, expiration date, or notes as needed.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Save or Delete</h4>
+                    <p>Tap "Save" to keep your changes, or scroll down to "Delete Item" to remove it.</p>
+                </div>
+            </div>
+
+            <h2 id="search">7. Searching Items</h2>
+            <p>Use the search bar at the top of the home screen to find items quickly. You can search by:</p>
+            <ul>
+                <li>Item name</li>
+                <li>Storage location</li>
+                <li>Notes content</li>
+            </ul>
+
+            <div class="tip">
+                <div class="tip-title">Quick Tip</div>
+                <p>Search supports partial matching, so typing "眼" will find items with "蒸汽眼罩" in the name.</p>
+            </div>
+
+            <h2 id="export">8. Exporting Data</h2>
+            <p>PropertyTracker allows you to export all your item data:</p>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Open Settings</h4>
+                    <p>Tap the gear icon in the top-left corner of the main screen.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Export Data</h4>
+                    <p>Tap "Export Item Data" in the Settings menu.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Choose Format</h4>
+                    <p>Select "Data Only" to export item information, or "Include Images" to also export photos.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Share</h4>
+                    <p>Choose how to share - save to Files, send via email, AirDrop, or any other app.</p>
+                </div>
+            </div>
+
+            <h2 id="settings">9. Settings</h2>
+            <div class="feature-card">
+                <h4>Dark Mode</h4>
+                <p>Toggle dark mode to switch between light and dark appearance. Your preference is saved automatically.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>User Manual</h4>
+                <p>Access this help guide anytime from Settings > User Manual.</p>
+            </div>
+
+            <h2 id="tips">10. Tips & Tricks</h2>
+
+            <h3>Item Suggestions</h3>
+            <p>When adding items, the app suggests names from a built-in database of 20,000+ common items and 10,000+ books. Just tap a suggestion to fill it in quickly.</p>
+
+            <h3>Recent Locations</h3>
+            <p>The location selector shows your recently used locations first, making it faster to add items to common storage spots.</p>
+
+            <h3>Swipe to Delete</h3>
+            <p>Swipe left on any item in the list to quickly delete it.</p>
+
+            <h3>Grouped View</h3>
+            <p>Items are automatically grouped by storage location, making it easy to see everything in one place.</p>
+
+            <h2 id="faq">11. FAQ</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Is my data backed up automatically?</div>
+                <p>A: No, data is stored only on your device. We recommend using the export feature regularly to create backups.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I use the app on multiple devices?</div>
+                <p>A: Data is not synced between devices. You can export your data on one device and import on another (future feature).</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How do I remove a photo from an item?</div>
+                <p>A: Open the item, tap on the photo, then tap the X button to remove it.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What happens when an item expires?</div>
+                <p>A: The app marks it as "Expired" in red. You can then edit or delete the item as needed.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I change the language?</div>
+                <p>A: The app follows your device's language settings. Change your iOS language in Settings > General > Language & Region.</p>
+            </div>
+
+            <div class="warning">
+                <div class="warning-title">Data Loss Warning</div>
+                <p>Uninstalling the app will delete all your data. Always export your data regularly to avoid losing important information.</p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 PropertyTracker. All rights reserved.</p>
+            <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="user-agreement.html">User Agreement</a></p>
+        </div>
+    </div>
+</body>
+</html>

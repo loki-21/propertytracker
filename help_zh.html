@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用指南 - PropertyTracker储物箱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: -20px;
+        }
+        h2 {
+            color: #007AFF;
+            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2:first-child {
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .tip {
+            background: #e8f4fd;
+            border-left: 4px solid #007AFF;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-title {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 5px;
+        }
+        .warning {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-title {
+            font-weight: 600;
+            color: #ff9800;
+            margin-bottom: 5px;
+        }
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: #007AFF;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .feature-card h4 {
+            color: #007AFF;
+            margin-bottom: 10px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        .lang-switch {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: #007AFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc h3 {
+            margin-bottom: 10px;
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PropertyTracker</h1>
+        <p>储物箱使用指南</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="lang-switch">
+                <a href="help.html">English</a> | <a href="help_zh.html">中文</a>
+            </div>
+
+            <div class="toc">
+                <h3>目录</h3>
+                <ol>
+                    <li><a href="#getting-started">快速开始</a></li>
+                    <li><a href="#adding-items">添加物品</a></li>
+                    <li><a href="#photos">添加照片</a></li>
+                    <li><a href="#locations">存放位置</a></li>
+                    <li><a href="#expiration">有效期追踪</a></li>
+                    <li><a href="#editing">编辑与删除</a></li>
+                    <li><a href="#search">搜索物品</a></li>
+                    <li><a href="#export">导出数据</a></li>
+                    <li><a href="#settings">设置</a></li>
+                    <li><a href="#tips">使用技巧</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ol>
+            </div>
+
+            <h2 id="getting-started">一、快速开始</h2>
+            <p>欢迎使用PropertyTracker储物箱！本指南将帮助您充分利用这款应用。</p>
+
+            <div class="tip">
+                <div class="tip-title">快速入门</div>
+                <p>点击主屏幕上的"添加物品"卡片开始添加物品到您的清单。</p>
+            </div>
+
+            <h2 id="adding-items">二、添加物品</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>点击添加物品</h4>
+                    <p>在主屏幕上点击"添加物品"卡片打开添加物品表单。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>输入物品名称</h4>
+                    <p>输入物品名称（必填）。应用会自动从数据库中建议匹配的项目，帮助您快速输入名称。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>选择位置</h4>
+                    <p>从预设列表中选择存放位置，或输入自定义位置。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>设置有效期（可选）</h4>
+                    <p>为有保质期的物品启用有效期追踪并设置日期。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>添加备注</h4>
+                    <p>添加关于物品的任何其他备注或说明。</p>
+                </div>
+            </div>
+
+            <h2 id="photos">三、添加照片</h2>
+            <p>您可以通过两种方式为物品添加照片：</p>
+
+            <div class="feature-card">
+                <h4>从相册选择</h4>
+                <p>点击"从相册选择"从设备照片库中选择现有照片。</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>拍照</h4>
+                <p>点击"拍照"打开相机拍摄物品的新照片。</p>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">相机对焦</div>
+                <p>点击相机预览画面上的任意位置设置对焦点。黄色指示器将显示对焦区域。</p>
+            </div>
+
+            <h2 id="locations">四、存放位置</h2>
+            <p>PropertyTracker包含预设位置帮助您整理物品：</p>
+            <ul>
+                <li><strong>厨房</strong> - 厨房物品和食物</li>
+                <li><strong>客厅</strong> - 客厅物品</li>
+                <li><strong>卧室</strong> - 卧室物品</li>
+                <li><strong>书房</strong> - 书籍、文件、办公用品</li>
+                <li><strong>玄关</strong> - 钥匙、包包、日常携带物品</li>
+                <li><strong>冰箱</strong> - 食品和饮料</li>
+                <li><strong>卫生间</strong> - 洗漱用品、药品</li>
+                <li><strong>阳台</strong> - 户外物品、植物</li>
+                <li><strong>储藏室</strong> - 季节性物品、工具</li>
+                <li><strong>车库</strong> - 汽车配件、工具</li>
+            </ul>
+
+            <p>您也可以输入自定义位置，如"抽屉"、"书架"等。</p>
+
+            <h2 id="expiration">五、有效期追踪</h2>
+            <p>启用物品的有效期以便获得及时提醒：</p>
+
+            <div class="feature-card">
+                <h4>状态指示</h4>
+                <ul>
+                    <li><strong>正常</strong> - 剩余时间充足</li>
+                    <li><strong>即将过期（橙色）</strong> - 剩余时间少于7天</li>
+                    <li><strong>已过期（红色）</strong> - 已超过有效期</li>
+                </ul>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">使用场景示例</div>
+                <p>追踪食品、药品、化妆品、电池、保修文档和季节性物品的有效期。</p>
+            </div>
+
+            <h2 id="editing">六、编辑与删除物品</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>打开物品</h4>
+                    <p>点击列表中的任何物品打开编辑视图。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>修改详情</h4>
+                    <p>根据需要更改名称、位置、照片、有效期或备注。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>保存或删除</h4>
+                    <p>点击"保存"保留更改，或向下滚动到"删除物品"将其移除。</p>
+                </div>
+            </div>
+
+            <h2 id="search">七、搜索物品</h2>
+            <p>使用主屏幕顶部的搜索栏快速查找物品。您可以搜索：</p>
+            <ul>
+                <li>物品名称</li>
+                <li>存放位置</li>
+                <li>备注内容</li>
+            </ul>
+
+            <div class="tip">
+                <div class="tip-title">快速提示</div>
+                <p>搜索支持模糊匹配，输入"眼"可以找到名称中包含"蒸汽眼罩"的物品。</p>
+            </div>
+
+            <h2 id="export">八、导出数据</h2>
+            <p>PropertyTracker允许您导出所有物品数据：</p>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>打开设置</h4>
+                    <p>点击主屏幕左上角的齿轮图标。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>导出数据</h4>
+                    <p>在设置菜单中点击"导出物品数据"。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>选择格式</h4>
+                    <p>选择"仅数据"导出物品信息，或选择"包含图片"同时导出照片。</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>分享</h4>
+                    <p>选择分享方式 - 保存到文件、通过邮件发送、隔空投送或任何其他应用。</p>
+                </div>
+            </div>
+
+            <h2 id="settings">九、设置</h2>
+            <div class="feature-card">
+                <h4>深色模式</h4>
+                <p>切换深色模式在浅色和深色外观之间切换。您的偏好会自动保存。</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>用户手册</h4>
+                <p>随时可通过设置 > 关于 > 用户手册访问本帮助指南。</p>
+            </div>
+
+            <h2 id="tips">十、使用技巧</h2>
+
+            <h3>物品建议</h3>
+            <p>添加物品时，应用会从包含20,000+常见物品和10,000+书籍的内置数据库中建议名称。点击建议即可快速填入。</p>
+
+            <h3>最近使用的位置</h3>
+            <p>位置选择器会优先显示您最近使用过的位置，方便您快速添加到常用存放点。</p>
+
+            <h3>左滑删除</h3>
+            <p>在列表中向左滑动任何物品即可快速删除。</p>
+
+            <h3>分组视图</h3>
+            <p>物品会自动按存放位置分组，方便您一目了然地查看所有物品。</p>
+
+            <h2 id="faq">十一、常见问题</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">问：我的数据会自动备份吗？</div>
+                <p>答：不会，数据仅存储在您的设备上。我们建议您定期使用导出功能创建备份。</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">问：我可以在多个设备上使用这个应用吗？</div>
+                <p>答：数据不会在设备之间同步。您可以在一台设备上导出数据，然后在另一台设备上导入（未来功能）。</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">问：如何移除物品的照片？</div>
+                <p>答：打开物品，点击照片，然后点击X按钮移除。</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">问：物品过期后会发生什么？</div>
+                <p>答：应用会将其标记为红色"已过期"。您可以随后编辑或删除该物品。</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">问：我可以更改语言吗？</div>
+                <p>答：应用遵循您设备的语言设置。请在设置 > 通用 > 语言与地区更改iOS语言。</p>
+            </div>
+
+            <div class="warning">
+                <div class="warning-title">数据丢失警告</div>
+                <p>卸载应用将删除您的所有数据。请定期导出数据以避免丢失重要信息。</p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 PropertyTracker 储物箱. 保留所有权利。</p>
+            <p><a href="index.html">首页</a> | <a href="privacy_zh.html">隐私政策</a> | <a href="user-agreement_zh.html">用户协议</a></p>
+        </div>
+    </div>
+</body>
+</html>
